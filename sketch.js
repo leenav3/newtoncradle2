@@ -35,8 +35,12 @@ function setup() {
 	bob4= new Bob(960,450,70);
 	bob5= new Bob(1030,450,70);
 
-	chain1 = new Chain(roof.body,bob1.body,0,0);
-
+	//chain1 = new Chain(roof.body,bob1.body,0,0);
+	chain1 = new Chain(bob3.bob,roof.body,0,0);  //first bob is passed to avoid tangling of the rope.
+	chain2 = new Chain(bob2.bob,roof.body,-70,0); 
+	chain3 = new Chain(bob4.bob,roof.body,70,0);
+	chain4 = new Chain(bob1.bob,roof.body,-140,0);
+	chain5 = new Chain(bob5.bob,roof.body,140,0);
 	
 
 	
@@ -63,12 +67,11 @@ function draw() {
   bob5.display();
 
   chain1.display();
-
+  chain2.display();
+  chain3.display();
+  chain4.display();
+  chain5.display();
   
-
-
-  
-  drawSprites();
  
 }
 
