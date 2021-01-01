@@ -35,8 +35,12 @@ function setup() {
 	bob4= new Bob(960,450,70);
 	bob5= new Bob(1030,450,70);
 
-	chain1 = new Chain(roof.body,bob1.body,0,0);
-
+	//chain1 = new Chain(roof.body,bob1.body,0,0);  
+        chain1 = new Chain(bob3.bob,roof.body,0,0);  //in your bob class you have given the property name as this.bob. So you need to use bob1.bob, instead of bob1.body
+	chain2 = new Chain(bob2.bob,roof.body,-70,0); // also I have written bob first to avoid tangling of the rope. 
+	chain3 = new Chain(bob4.bob,roof.body,70,0);  //also notice arrangement of the bobs. The bob in the middle is attached with chain1 at position 0,0.
+	chain4 = new Chain(bob1.bob,roof.body,-140,0); 
+	chain5 = new Chain(bob5.bob,roof.body,140,0);
 	
 
 	
