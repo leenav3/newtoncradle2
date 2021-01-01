@@ -4,10 +4,10 @@ class Bob {
 
         var options={
 
-            density:1,
-            restitution:0.4,
-            isStatic:true,
-            frictionAir:1
+            isStatic:false,  
+            density:0.8,        //experiment with different values.
+            restitution:1,     
+            friction: 0
 
         }
         this.width=width;
@@ -16,7 +16,7 @@ class Bob {
         this.x=x;
         this.y=y;
 
-        this.bob=Bodies.circle(this.x,this.y,this.r,options);
+        this.bob=Bodies.circle(this.x,this.y,this.r/2 ,options);  // radius changed
         World.add(world,this.bob);
 
 
